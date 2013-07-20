@@ -1,0 +1,64 @@
+﻿USE [REPCOVI]
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_REPRESUMEN_procesados]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[REPRESUMEN] DROP CONSTRAINT [DF_REPRESUMEN_procesados]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_REPRESUMEN_errores]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[REPRESUMEN] DROP CONSTRAINT [DF_REPRESUMEN_errores]
+END
+
+GO
+
+USE [REPCOVI]
+GO
+
+/****** Object:  Table [dbo].[REPRESUMEN]    Script Date: 04/04/2013 14:39:50 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[REPRESUMEN]') AND type in (N'U'))
+DROP TABLE [dbo].[REPRESUMEN]
+GO
+
+USE [REPCOVI]
+GO
+
+/****** Object:  Table [dbo].[REPRESUMEN]    Script Date: 04/04/2013 14:39:50 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[REPRESUMEN](
+	[codEstacion] [varchar](5) NOT NULL,
+	[serieCaseta] [varchar](5) NOT NULL,
+	[turno] [char](2) NOT NULL,
+	[procesados] [int] NOT NULL,
+	[errores] [int] NOT NULL,
+	[lote] [varchar](20) NULL,
+ CONSTRAINT [PK_REPRESUMEN] PRIMARY KEY CLUSTERED 
+(
+	[codEstacion] ASC,
+	[serieCaseta] ASC,
+	[turno] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+ALTER TABLE [dbo].[REPRESUMEN] ADD  CONSTRAINT [DF_REPRESUMEN_procesados]  DEFAULT ((0)) FOR [procesados]
+GO
+
+ALTER TABLE [dbo].[REPRESUMEN] ADD  CONSTRAINT [DF_REPRESUMEN_errores]  DEFAULT ((0)) FOR [errores]
+GO
+

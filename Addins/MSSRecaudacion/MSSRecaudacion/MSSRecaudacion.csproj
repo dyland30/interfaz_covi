@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{214CAF2F-3513-4E01-87D5-81DDA5236B54}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MSSRecaudacion</RootNamespace>
+    <AssemblyName>MSSRecaudacion</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Application.Dynamics">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Microsoft Dynamics\GP2010\Application.Dynamics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Application.MenusForVisualStudioTools">
+      <HintPath>..\dependencias\Application.MenusForVisualStudioTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Dexterity.Bridge">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Microsoft Dynamics\GP2010\Microsoft.Dexterity.Bridge.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Dexterity.Shell">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Microsoft Dynamics\GP2010\Microsoft.Dexterity.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BE\CasetaBE.cs" />
+    <Compile Include="BE\EstacionTurno.cs" />
+    <Compile Include="BE\EstacionesBE.cs" />
+    <Compile Include="BE\ResumenBE.cs" />
+    <Compile Include="BL\CasetaBL.cs" />
+    <Compile Include="BL\EstacionesBL.cs" />
+    <Compile Include="BL\ResumenBL.cs" />
+    <Compile Include="BL\Util.cs" />
+    <Compile Include="DAO\BDGP.cs" />
+    <Compile Include="DAO\BDREP.cs" />
+    <Compile Include="DAO\Seguridad.cs" />
+    <Compile Include="FrmInterfazRecaudacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInterfazRecaudacion.Designer.cs">
+      <DependentUpon>FrmInterfazRecaudacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GpAddIn.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resumen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resumen.Designer.cs">
+      <DependentUpon>Resumen.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FrmInterfazRecaudacion.resx">
+      <DependentUpon>FrmInterfazRecaudacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Resumen.resx">
+      <DependentUpon>Resumen.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Data.dat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Toolbar_Print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Toolbar_Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Toolbar_New.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window_NotePresent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Toolbar_Void.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Toolbar_Redisplay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Toolbar_Post.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Toolbar_Open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Toolbar_DeleteAll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Toolbar_Clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Field_NotePresent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Field_NoteAbsent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Field_Lookup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Field_Expansion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Field_Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Field_Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Field_MapPoint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window_NoteAbsent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VCR_Previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VCR_Next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VCR_Last.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VCR_First.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Toolbar_Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Toolbar_Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Toolbar_Cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HelpImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Animation.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Util\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

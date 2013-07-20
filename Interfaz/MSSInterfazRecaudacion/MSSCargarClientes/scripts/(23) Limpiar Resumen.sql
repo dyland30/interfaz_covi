@@ -1,0 +1,28 @@
+﻿USE [REPCOVI]
+GO
+
+/****** Object:  StoredProcedure [dbo].[LIMPIAR_RESUMEN]    Script Date: 09/28/2012 11:32:12 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[LIMPIAR_RESUMEN]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[LIMPIAR_RESUMEN]
+GO
+
+USE [REPCOVI]
+GO
+
+/****** Object:  StoredProcedure [dbo].[LIMPIAR_RESUMEN]    Script Date: 09/28/2012 11:32:12 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROC [dbo].[LIMPIAR_RESUMEN]
+AS
+BEGIN
+	DELETE FROM REPRESUMEN;
+
+END
+
+GO
+
+

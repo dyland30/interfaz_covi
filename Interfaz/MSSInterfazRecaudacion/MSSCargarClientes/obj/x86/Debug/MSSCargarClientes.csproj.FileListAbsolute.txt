@@ -1,0 +1,6 @@
+C:\Users\Public\Documents\COVIPERU\econnect\pruebaClientes\MSSCargaClientes\MSSCargarClientes\bin\Debug\MSSCargarClientes.exe
+C:\Users\Public\Documents\COVIPERU\econnect\pruebaClientes\MSSCargaClientes\MSSCargarClientes\bin\Debug\MSSCargarClientes.pdb
+C:\Users\Public\Documents\COVIPERU\econnect\pruebaClientes\MSSCargaClientes\MSSCargarClientes\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Public\Documents\COVIPERU\econnect\pruebaClientes\MSSCargaClientes\MSSCargarClientes\obj\x86\Debug\MSSCargarClientes.exe
+C:\Users\Public\Documents\COVIPERU\econnect\pruebaClientes\MSSCargaClientes\MSSCargarClientes\obj\x86\Debug\MSSCargarClientes.pdb
+C:\Users\Public\Documents\COVIPERU\econnect\pruebaClientes\MSSCargaClientes\MSSCargarClientes\bin\Debug\MSSCargarClientes.exe.config
