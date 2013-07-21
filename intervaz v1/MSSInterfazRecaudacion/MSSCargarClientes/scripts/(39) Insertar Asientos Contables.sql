@@ -51,7 +51,7 @@ BEGIN
 			exec taGLTransactionLineInsert 
 			@I_vBACHNUMB=@nroLote,
 			@I_vJRNENTRY=@numeroDiario,
-			@I_vSQNCLINE=1.00000,
+			@I_vSQNCLINE=16384.00000,
 			@I_vACTINDX=default,
 			@I_vCRDTAMNT=0.00000,
 			@I_vDEBITAMT=@monto,
@@ -97,7 +97,7 @@ BEGIN
 			exec taGLTransactionLineInsert 
 			@I_vBACHNUMB=@nroLote,
 			@I_vJRNENTRY=@numeroDiario,
-			@I_vSQNCLINE=2.00000,
+			@I_vSQNCLINE=32768.00000,
 			@I_vACTINDX=default,
 			@I_vCRDTAMNT=@monto,
 			@I_vDEBITAMT=0.00000,

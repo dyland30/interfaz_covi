@@ -124,7 +124,7 @@ BEGIN
 		ORDER BY SEQNUMBR DESC
 		
 		--AUMENTAR SEQNUMBER EN 1
-		SET @SEQNUMBR=@SEQNUMBR+1;
+		SET @SEQNUMBR=@SEQNUMBR+16384;
 		
 		
 		-- insertar debito RM
@@ -157,7 +157,7 @@ BEGIN
            ,@FECHA_ASIENTO
            ,@PSTGSTUS
            ,@CHANGED
-           ,@NRODOC
+           ,@numeroDocumento
            ,@DCSTATUS
            ,@DISTTYPE
            ,@RMDTYPAL
@@ -176,7 +176,7 @@ BEGIN
            ,@DISTREF)
            
         --AUMENTAR SEQNUMBER EN 1
-		SET @SEQNUMBR=@SEQNUMBR+1;
+		SET @SEQNUMBR=@SEQNUMBR+16384;
            
         
            -- insertar credito RM
@@ -209,7 +209,7 @@ BEGIN
            ,@FECHA_ASIENTO
            ,@PSTGSTUS
            ,@CHANGED
-           ,@NRODOC
+           ,@numeroDocumento
            ,@DCSTATUS
            ,@DISTTYPE
            ,@RMDTYPAL
@@ -243,7 +243,8 @@ BEGIN
            
        -- INSERTAR DEBITO EN SOP
        --AUMENTAR SEQNUMBER EN 1
-		SET @SEQNUMBR=@SEQNUMBR+1;
+		SET @SEQNUMBR=@SEQNUMBR+16384;
+
 		INSERT INTO SOP10102
            ([SOPTYPE]
            ,[SOPNUMBE]
@@ -261,7 +262,7 @@ BEGIN
            ,[Contract_Exchange_Rate])
      VALUES
            (@SOPTYPE
-           ,@NRODOC
+           ,@numeroDocumento
            ,@SEQNUMBR
            ,@DISTTYPE
            ,@DISTREF
@@ -277,7 +278,8 @@ BEGIN
        
        -- INSERTAR CREDITO EN SOP
 	--AUMENTAR SEQNUMBER EN 1
-		SET @SEQNUMBR=@SEQNUMBR+1;
+		SET @SEQNUMBR=@SEQNUMBR+16384;
+		
 		INSERT INTO SOP10102
            ([SOPTYPE]
            ,[SOPNUMBE]
@@ -295,7 +297,7 @@ BEGIN
            ,[Contract_Exchange_Rate])
      VALUES
            (@SOPTYPE
-           ,@NRODOC
+           ,@numeroDocumento
            ,@SEQNUMBR
            ,@DISTTYPE
            ,@DISTREF
