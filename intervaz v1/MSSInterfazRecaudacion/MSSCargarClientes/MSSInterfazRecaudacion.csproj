@@ -180,6 +180,7 @@
     <Content Include="scripts\%2845%29  ReporteCovi PagosChequera.sql" />
     <Content Include="scripts\%2846%29 ReporteCovi_ObtenerChequerasFD.sql" />
     <Content Include="scripts\%2847%29 ReporteCovi_DepositoChequera.sql" />
+    <Content Include="scripts\%2854%29 UFN_OBTENER_NUMDOC_SOP.sql" />
     <Content Include="scripts\old\03-consolidado_gptst.sql" />
     <Content Include="scripts\old\02-consolidado_repcovi.sql" />
     <Content Include="scripts\old\01-consolidado_tablas.sql" />
