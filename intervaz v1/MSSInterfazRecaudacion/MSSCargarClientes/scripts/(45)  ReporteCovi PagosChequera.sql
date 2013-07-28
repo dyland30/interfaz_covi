@@ -1,5 +1,5 @@
 ﻿
-USE [GPTST]
+USE [GPCOV]
 GO
 /****** Object:  StoredProcedure [dbo].[ReporteCovi_PagosChequera]    Script Date: 10/12/2012 15:17:09 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[ReporteCovi_PagosChequera]') AND type in (N'P', N'PC'))

@@ -1,4 +1,4 @@
-USE [GPTST]
+USE [GPCOV]
 GO
 
 /****** Object:  StoredProcedure [dbo].[ReporteRecaudacionPeaje]    Script Date: 09/28/2012 09:58:33 ******/

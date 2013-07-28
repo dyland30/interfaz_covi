@@ -1,4 +1,4 @@
-﻿USE [GPTST]
+﻿USE [GPCOV]
 GO
 IF NOT EXISTS (SELECT * FROM t_documento_tributario WHERE LOC_CodigoDocumento='DET' )
 INSERT INTO t_documento_tributario

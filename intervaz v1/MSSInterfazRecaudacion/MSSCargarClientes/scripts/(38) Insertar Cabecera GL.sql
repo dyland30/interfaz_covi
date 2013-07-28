@@ -1,4 +1,4 @@
-USE [GPTST]
+USE [GPCOV]
 GO
 
 /****** Object:  StoredProcedure [dbo].[insertarCabeceraGL]    Script Date: 09/17/2012 09:35:21 ******/
@@ -6,7 +6,7 @@ IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[inser
 DROP PROCEDURE [dbo].[insertarCabeceraGL]
 GO
 
-USE [GPTST]
+USE [GPCOV]
 GO
 
 /****** Object:  StoredProcedure [dbo].[insertarCabeceraGL]    Script Date: 09/17/2012 09:35:21 ******/

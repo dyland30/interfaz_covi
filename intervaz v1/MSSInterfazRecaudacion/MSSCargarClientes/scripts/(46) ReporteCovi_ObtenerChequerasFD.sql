@@ -1,4 +1,4 @@
-﻿USE [GPTST]
+﻿USE [GPCOV]
 GO
 
 /****** Object:  StoredProcedure [dbo].[ReporteCovi_ObtenerChequerasFD]    Script Date: 10/12/2012 15:46:41 ******/

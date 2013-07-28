@@ -1,4 +1,4 @@
-USE [GPTST]
+USE [GPCOV]
 GO
 
 /****** Object:  StoredProcedure [dbo].[InsertarAC_Financiero_SOP_RM]    Script Date: 10/12/2012 18:06:01 ******/

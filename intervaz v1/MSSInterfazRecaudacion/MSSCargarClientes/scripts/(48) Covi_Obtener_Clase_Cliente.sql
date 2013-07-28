@@ -1,4 +1,4 @@
-﻿USE [GPTST]
+﻿USE [GPCOV]
 GO
 
 /****** Object:  StoredProcedure [dbo].[COVI_OBTENER_CLASE_CLIENTE]    Script Date: 10/22/2012 12:17:27 ******/

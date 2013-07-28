@@ -1,4 +1,4 @@
-USE [GPTST]
+USE [GPCOV]
 GO
 
 /****** Object:  StoredProcedure [dbo].[covi_insertarAsientosContables]    Script Date: 09/25/2012 12:18:39 ******/
@@ -6,7 +6,7 @@ IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[covi_
 DROP PROCEDURE [dbo].[covi_insertarAsientosContables]
 GO
 
-USE [GPTST]
+USE [GPCOV]
 GO
 
 /****** Object:  StoredProcedure [dbo].[covi_insertarAsientosContables]    Script Date: 09/25/2012 12:18:39 ******/

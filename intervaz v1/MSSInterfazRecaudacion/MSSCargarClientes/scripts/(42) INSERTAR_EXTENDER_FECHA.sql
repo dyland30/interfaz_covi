@@ -1,4 +1,4 @@
-﻿USE [GPTST]
+﻿USE [GPCOV]
 GO
 
 /****** Object:  StoredProcedure [dbo].[INSERTAR_EXTENDER_FECHA]    Script Date: 09/28/2012 12:39:15 ******/
@@ -14,7 +14,7 @@ CREATE PROC [dbo].[INSERTAR_EXTENDER_FECHA]
 AS
 BEGIN
 
-INSERT INTO [GPTST].[dbo].[EXT00102]
+INSERT INTO [EXT00102]
            ([PT_Window_ID]
            ,[PT_UD_Key]
            ,[PT_UD_Number]

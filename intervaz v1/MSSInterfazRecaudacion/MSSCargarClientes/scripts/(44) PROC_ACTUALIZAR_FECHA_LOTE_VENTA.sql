@@ -1,4 +1,4 @@
-﻿USE [GPTST]
+﻿USE [GPCOV]
 GO
 
 /****** Object:  StoredProcedure [dbo].[PROC_ACTUALIZAR_FECHA_LOTE_VENTA]    Script Date: 09/28/2012 12:44:37 ******/

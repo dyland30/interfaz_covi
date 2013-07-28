@@ -1,4 +1,4 @@
-USE [GPTST]
+USE [GPCOV]
 GO
 
 /****** Object:  StoredProcedure [dbo].[InsertarValoresDefinidosUsuarioSOP]    Script Date: 09/28/2012 11:49:02 ******/
@@ -6,7 +6,7 @@ IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Inser
 DROP PROCEDURE [dbo].[InsertarValoresDefinidosUsuarioSOP]
 GO
 
-USE [GPTST]
+USE [GPCOV]
 GO
 
 /****** Object:  StoredProcedure [dbo].[InsertarValoresDefinidosUsuarioSOP]    Script Date: 09/28/2012 11:49:02 ******/

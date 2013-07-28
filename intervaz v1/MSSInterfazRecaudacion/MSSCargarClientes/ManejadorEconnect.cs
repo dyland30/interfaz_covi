@@ -270,7 +270,8 @@ namespace MSSCargarClientes
                             string tipoDistribucionDefecto = ConfigurationManager.AppSettings.Get("tipoDistribucionDefecto");
                             Int16 nroTipoDistribucion = Int16.Parse(tipoDistribucionDefecto);
 
-                            CabeceraVentaBL.crearDistribucionesSOPRM(Jrnentry, nroTipoDistribucion);
+                            // por solicitud de Jimmy los asientos ya no se guardaran ni en sop ni en rm
+                            //CabeceraVentaBL.crearDistribucionesSOPRM(Jrnentry, nroTipoDistribucion);
                            
                             //agregar turno y codigo de estacion 
                             // turno

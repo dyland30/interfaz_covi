@@ -1,4 +1,4 @@
-﻿USE [GPTST]
+﻿USE [GPCOV]
 GO
 
 /****** Object:  UserDefinedFunction [dbo].[UFN_TOTAL_FACTURADO_DIVIDIDO_TELEPASS]    Script Date: 10/15/2012 16:49:49 ******/

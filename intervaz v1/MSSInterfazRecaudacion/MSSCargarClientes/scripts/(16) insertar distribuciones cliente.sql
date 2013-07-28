@@ -1,4 +1,4 @@
-USE [GPTST]
+USE [GPCOV]
 GO
 
 /****** Object:  StoredProcedure [dbo].[InsertarDistribucionClienteSOP]    Script Date: 09/28/2012 11:44:46 ******/

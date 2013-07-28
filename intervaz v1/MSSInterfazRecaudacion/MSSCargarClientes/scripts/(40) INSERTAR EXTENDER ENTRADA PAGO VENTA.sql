@@ -1,5 +1,5 @@
 
-USE [GPTST]
+USE [GPCOV]
 /****** Object:  StoredProcedure [dbo].[OBTENER_RESUMEN]    Script Date: 09/19/2012 13:46:35 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[INSERTAR_EXTENDER_FECHA]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[INSERTAR_EXTENDER_FECHA]
@@ -12,7 +12,7 @@ CREATE PROC [dbo].[INSERTAR_EXTENDER_FECHA]
 AS
 BEGIN
  
-INSERT INTO [GPTST].[dbo].[EXT00102]
+INSERT INTO [GPCOV].[dbo].[EXT00102]
            ([PT_Window_ID]
            ,[PT_UD_Key]
            ,[PT_UD_Number]

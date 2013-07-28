@@ -1,4 +1,4 @@
-﻿USE [GPTST]
+﻿USE [GPCOV]
 GO
 
 /****** Object:  StoredProcedure [dbo].[PROC_COVI_INSERTAR_DATOS_TRIBUTARIOS_VENTA]    Script Date: 10/25/2012 16:22:19 ******/
